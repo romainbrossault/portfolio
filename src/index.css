@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Custom cursor styles */
+  .cursor-bubble {
+    cursor: none;
+  }
+
+  /* Water bubble cursor */
+  .cursor-bubble::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: rgba(96, 165, 250, 0.4);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    left: var(--x, 0);
+    top: var(--y, 0);
+    transform: translate(-50%, -50%);
+    animation: cursorBubble 2s infinite;
+    transition: left 0.1s, top 0.1s;
+  }
+
+  @keyframes cursorBubble {
+    0%, 100% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+  }
+}
+
+/* Opening animation */
+.fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cursor-bubble::before {
+    display: none;
+  }
+  
+  .cursor-bubble {
+    cursor: auto;
+  }
+}
