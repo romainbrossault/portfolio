@@ -1,9 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@import './styles/cursor.css';
-@import './styles/animations.css';
 @import './styles/navigation.css';
 @import './styles/bubbleEffect.css';
 @import './styles/introAnimation.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

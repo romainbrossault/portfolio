@@ -18,7 +18,6 @@ export default function Contact() {
     setStatus('sending');
 
     try {
-      // Note: You'll need to set up EmailJS and replace these with your actual service details
       await emailjs.send(
         'YOUR_SERVICE_ID',
         'YOUR_TEMPLATE_ID',
