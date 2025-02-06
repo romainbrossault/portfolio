@@ -1,0 +1,11 @@
+.intro-container {
+    @apply fixed inset-0 z-50 bg-blue-50 dark:bg-gray-900 flex items-center justify-center;
+  }
+  
+  .intro-logo {
+    @apply text-4xl font-bold text-blue-600 dark:text-blue-300 relative;
+  }
+  
+  .intro-bubble {
+    @apply absolute rounded-full bg-blue-300/30 dark:bg-blue-500/30;
+  }

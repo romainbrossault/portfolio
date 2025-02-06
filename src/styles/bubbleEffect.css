@@ -1,0 +1,8 @@
+.bubble-canvas {
+    @apply fixed inset-0 pointer-events-none z-0;
+  }
+  
+  .bubble {
+    @apply absolute rounded-full;
+    background: rgba(96, 165, 250, 0.3);
+  }

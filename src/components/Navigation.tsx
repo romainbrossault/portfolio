@@ -4,6 +4,7 @@ import { Sun, Moon, Download, Menu, X } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 import { motion, AnimatePresence } from 'framer-motion';
 import BubbleButton from './BubbleButton';
+import '../styles/navigation.css';
 
 export default function Navigation() {
   const { theme, toggleTheme } = useTheme();
@@ -52,8 +53,7 @@ export default function Navigation() {
                   <NavLink 
                     to={to} 
                     className={({ isActive }) => 
-                      `px-3 py-2 rounded-md text-sm font-medium transition-colors
-                      ${isActive ? 'text-blue-600 dark:text-blue-300' : 'text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-300'}`
+                      `nav-link ${isActive ? 'nav-link-active' : 'nav-link-inactive'}`
                     }
                   >
                     {label}
@@ -113,7 +113,7 @@ export default function Navigation() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-blue-50/95 dark:bg-gray-900/95 backdrop-blur-sm"
+            className="mobile-menu"
           >
             <div className="px-2 pt-2 pb-3 space-y-1">
               {[
@@ -129,10 +129,10 @@ export default function Navigation() {
                   to={to}
                   onClick={() => setIsMenuOpen(false)}
                   className={({ isActive }) =>
-                    `block px-3 py-2 rounded-md text-base font-medium ${
+                    `mobile-menu-link ${
                       isActive
-                        ? 'text-blue-600 dark:text-blue-300'
-                        : 'text-gray-600 dark:text-gray-300'
+                        ? 'nav-link-active'
+                        : 'nav-link-inactive'
                     }`
                   }
                 >

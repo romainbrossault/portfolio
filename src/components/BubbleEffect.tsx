@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import '../styles/bubbleEffect.css';
 
 interface Bubble {
   x: number;
@@ -68,7 +69,7 @@ export default function BubbleEffect() {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 pointer-events-none z-0"
+      className="bubble-canvas"
     />
   );
 }
