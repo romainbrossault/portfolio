@@ -11,7 +11,7 @@ export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleDownloadCV = () => {
-    const cvUrl = '/path-to-your-cv.pdf';
+    const cvUrl = '/src/components/CV_BrossaultRomain.pdf';
     const link = document.createElement('a');
     link.href = cvUrl;
     link.download = 'Romain_Brossault_CV.pdf';

@@ -2,13 +2,15 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, ExternalLink } from 'lucide-react';
 import restaurantImage from '../images/projet_restaurant.jpg';
+import portfolioImage from '../images/portfolio.png';
+import alcoolImage from '../images/testAlcool.png'
 
 export default function Projects() {
   const projects = [
     {
       title: "Portfolio Personnel",
       description: "Portfolio moderne avec des animations fluides, un thème sombre/clair, et une interface intuitive. Développé avec React et Tailwind CSS.",
-      image: "",
+      image: portfolioImage,
       technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
       links: {
         github: ""
@@ -26,7 +28,7 @@ export default function Projects() {
     {
       title: "Application de test d'alcoolémie",
       description: "Application permettant de tester son taux d'alcoolémie en fonction de la quantité d'alcool consommée. Développée avec Visual Studio 2022.",
-      image: "",
+      image: alcoolImage,
       technologies: ["XAML","C#"],
       links: {
         github: "https://github.com/romainbrossault/AlcoolTest-WPF"
