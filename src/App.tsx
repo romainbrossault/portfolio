@@ -28,7 +28,7 @@ function AppContent() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-blue-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex flex-col cursor-bubble">
+    <div className="min-h-screen bg-blue-50 dark:bg-space-base text-gray-900 dark:text-gray-100 flex flex-col cursor-bubble">
       <WaveBackground />
       <BubbleEffect />
       <div className="relative z-10 flex flex-col min-h-screen">
@@ -62,4 +62,4 @@ function App() {
   );
 }
 
-export default App;
+export default App

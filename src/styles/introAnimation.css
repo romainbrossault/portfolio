@@ -1,11 +1,26 @@
 .intro-container {
-    @apply fixed inset-0 z-50 bg-blue-50 dark:bg-gray-900 flex items-center justify-center;
-  }
-  
-  .intro-logo {
-    @apply text-4xl font-bold text-blue-600 dark:text-blue-300 relative;
-  }
-  
-  .intro-bubble {
-    @apply absolute rounded-full bg-blue-300/30 dark:bg-blue-500/30;
-  }
+  @apply fixed inset-0 z-50 flex items-center justify-center;
+  background: theme('colors.blue.50');
+}
+
+.dark .intro-container {
+  background: radial-gradient(circle at center, #1a1b3c, #0a0b1e);
+}
+
+.intro-logo {
+  @apply text-4xl font-bold relative;
+  color: theme('colors.blue.600');
+}
+
+.dark .intro-logo {
+  color: theme('colors.purple.300');
+}
+
+.intro-bubble {
+  @apply absolute rounded-full;
+  background: rgba(96, 165, 250, 0.3);
+}
+
+.dark .intro-bubble {
+  background: rgba(167, 139, 250, 0.3);
+}

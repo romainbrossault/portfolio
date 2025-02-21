@@ -1,0 +1,39 @@
+.space-background {
+    @apply fixed inset-0 -z-10 overflow-hidden;
+  }
+  
+  .star {
+    @apply absolute rounded-full bg-space-star;
+    animation: twinkle var(--twinkle-duration, 2s) ease-in-out infinite;
+  }
+  
+  .planet {
+    @apply absolute rounded-full;
+    animation: orbit var(--orbit-duration, 20s) linear infinite;
+  }
+  
+  .nebula {
+    @apply absolute opacity-30 blur-2xl;
+    background: radial-gradient(circle, var(--nebula-color), transparent);
+  }
+  
+  .space-glow {
+    @apply absolute inset-0;
+    background: radial-gradient(
+      circle at var(--x, 50%) var(--y, 50%),
+      rgba(99, 102, 241, 0.15) 0%,
+      transparent 50%
+    );
+  }
+  
+  .space-card::before {
+    content: '';
+    @apply absolute inset-0 -z-10 rounded-lg opacity-30;
+    background: linear-gradient(
+      45deg,
+      transparent 0%,
+      rgba(99, 102, 241, 0.2) 50%,
+      transparent 100%
+    );
+    filter: blur(10px);
+  }

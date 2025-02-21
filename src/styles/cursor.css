@@ -1,0 +1,38 @@
+.cursor-bubble {
+    cursor: none;
+  }
+  
+  .cursor-bubble::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: rgba(96, 165, 250, 0.4);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    left: var(--x, 0);
+    top: var(--y, 0);
+    transform: translate(-50%, -50%);
+    animation: cursorBubble 2s infinite;
+    transition: left 0.1s, top 0.1s;
+  }
+  
+  @keyframes cursorBubble {
+    0%, 100% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .cursor-bubble::before {
+      display: none;
+    }
+    
+    .cursor-bubble {
+      cursor: auto;
+    }
+  }

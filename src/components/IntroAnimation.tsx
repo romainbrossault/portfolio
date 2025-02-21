@@ -35,7 +35,7 @@ export default function IntroAnimation() {
             transition={{ duration: 0.5 }}
             className="intro-logo"
           >
-            RB
+            Romain Brossault
           </motion.div>
           {bubbles.map(bubble => (
             <motion.div

@@ -23,6 +23,20 @@ export default function WaveBackground() {
           repeatType: "reverse",
         }}
       />
+      {/* Add stars for dark mode */}
+      {Array.from({ length: 50 }).map((_, i) => (
+        <div
+          key={i}
+          className="star dark:block hidden"
+          style={{
+            width: Math.random() * 3 + 1 + 'px',
+            height: Math.random() * 3 + 1 + 'px',
+            left: Math.random() * 100 + '%',
+            top: Math.random() * 100 + '%',
+            '--twinkle-duration': Math.random() * 3 + 1 + 's',
+          } as React.CSSProperties}
+        />
+      ))}
     </div>
   );
 }

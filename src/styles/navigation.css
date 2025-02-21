@@ -1,19 +1,19 @@
 .nav-link {
-    @apply px-3 py-2 rounded-md text-sm font-medium transition-colors;
-  }
-  
-  .nav-link-active {
-    @apply text-blue-600 dark:text-blue-300;
-  }
-  
-  .nav-link-inactive {
-    @apply text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-300;
-  }
-  
-  .mobile-menu {
-    @apply md:hidden bg-blue-50/95 dark:bg-gray-900/95 backdrop-blur-sm;
-  }
-  
-  .mobile-menu-link {
-    @apply block px-3 py-2 rounded-md text-base font-medium;
-  }
+  @apply px-3 py-2 rounded-md text-sm font-medium transition-colors;
+}
+
+.nav-link-active {
+  @apply text-blue-600 dark:text-purple-300;
+}
+
+.nav-link-inactive {
+  @apply text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-purple-300;
+}
+
+.mobile-menu {
+  @apply md:hidden bg-blue-50/95 dark:bg-[#0a0b1e]/95 backdrop-blur-sm;
+}
+
+.mobile-menu-link {
+  @apply block px-3 py-2 rounded-md text-base font-medium;
+}
