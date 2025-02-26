@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Send } from 'lucide-react';
+import { Send, Mail, User, MessageSquare } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
+    email: '',
     subject: '',
     message: ''
   });
@@ -19,19 +20,20 @@ export default function Contact() {
 
     try {
       await emailjs.send(
-        'YOUR_SERVICE_ID',
-        'YOUR_TEMPLATE_ID',
+        'service_nfew82o',
+        'template_yrtd1jf',
         {
           to_email: 'romainbrossault.pro@gmail.com',
           from_name: `${formData.firstName} ${formData.lastName}`,
+          from_email: formData.email,
           subject: formData.subject,
           message: formData.message
         },
-        'YOUR_PUBLIC_KEY'
+        'YDFU4QtAhvT2q9rQf'
       );
 
       setStatus('success');
-      setFormData({ firstName: '', lastName: '', subject: '', message: '' });
+      setFormData({ firstName: '', lastName: '', email: '', subject: '', message: '' });
     } catch (error) {
       setStatus('error');
     }
@@ -44,22 +46,29 @@ export default function Contact() {
       className="min-h-screen pt-20 px-4"
     >
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold text-blue-600 dark:text-blue-300 mb-12 text-center">
-          Contact
-        </h1>
+        <div className="text-center mb-12">
+          <Mail className="w-16 h-16 mx-auto mb-4 text-blue-600 dark:text-blue-300" />
+          <h1 className="text-4xl font-bold text-blue-600 dark:text-blue-300">
+            Contactez-moi
+          </h1>
+          <p className="mt-4 text-gray-600 dark:text-gray-300 text-lg">
+            N'hésitez pas à me contacter pour toute question ou proposition
+          </p>
+        </div>
 
         <motion.form
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-white dark:bg-blue-900/50 p-8 rounded-lg shadow-lg"
+          className="bg-white/80 dark:bg-blue-900/30 p-8 rounded-xl shadow-xl backdrop-blur-sm border border-gray-200 dark:border-blue-800/30"
           onSubmit={handleSubmit}
         >
           <div className="grid md:grid-cols-2 gap-6 mb-6">
-            <div>
+            <div className="space-y-2">
               <label 
                 htmlFor="firstName" 
-                className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                className="block text-sm font-medium text-gray-700 dark:text-gray-300"
               >
+                <User className="w-4 h-4 inline-block mr-2" />
                 Prénom
               </label>
               <input
@@ -67,15 +76,16 @@ export default function Contact() {
                 id="firstName"
                 value={formData.firstName}
                 onChange={(e) => setFormData(prev => ({ ...prev, firstName: e.target.value }))}
-                className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white/50 dark:bg-gray-800/50 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent backdrop-blur-sm transition-colors"
                 required
               />
             </div>
-            <div>
+            <div className="space-y-2">
               <label 
                 htmlFor="lastName" 
-                className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                className="block text-sm font-medium text-gray-700 dark:text-gray-300"
               >
+                <User className="w-4 h-4 inline-block mr-2" />
                 Nom
               </label>
               <input
@@ -83,17 +93,37 @@ export default function Contact() {
                 id="lastName"
                 value={formData.lastName}
                 onChange={(e) => setFormData(prev => ({ ...prev, lastName: e.target.value }))}
-                className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white/50 dark:bg-gray-800/50 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent backdrop-blur-sm transition-colors"
                 required
               />
             </div>
           </div>
 
-          <div className="mb-6">
+          <div className="mb-6 space-y-2">
+            <label 
+              htmlFor="email" 
+              className="block text-sm font-medium text-gray-700 dark:text-gray-300"
+            >
+              <Mail className="w-4 h-4 inline-block mr-2" />
+              Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              value={formData.email}
+              onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
+              className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white/50 dark:bg-gray-800/50 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent backdrop-blur-sm transition-colors"
+              required
+              placeholder="votre.email@exemple.com"
+            />
+          </div>
+
+          <div className="mb-6 space-y-2">
             <label 
               htmlFor="subject" 
-              className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+              className="block text-sm font-medium text-gray-700 dark:text-gray-300"
             >
+              <MessageSquare className="w-4 h-4 inline-block mr-2" />
               Objet
             </label>
             <input
@@ -101,16 +131,17 @@ export default function Contact() {
               id="subject"
               value={formData.subject}
               onChange={(e) => setFormData(prev => ({ ...prev, subject: e.target.value }))}
-              className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white/50 dark:bg-gray-800/50 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent backdrop-blur-sm transition-colors"
               required
             />
           </div>
 
-          <div className="mb-6">
+          <div className="mb-6 space-y-2">
             <label 
               htmlFor="message" 
-              className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+              className="block text-sm font-medium text-gray-700 dark:text-gray-300"
             >
+              <MessageSquare className="w-4 h-4 inline-block mr-2" />
               Message
             </label>
             <textarea
@@ -118,36 +149,46 @@ export default function Contact() {
               value={formData.message}
               onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
               rows={6}
-              className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white/50 dark:bg-gray-800/50 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent backdrop-blur-sm transition-colors resize-none"
               required
             />
           </div>
 
-          <button
+          <motion.button
             type="submit"
             disabled={status === 'sending'}
-            className="w-full flex items-center justify-center px-6 py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors disabled:bg-blue-400"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className="w-full flex items-center justify-center px-6 py-3 bg-blue-600 dark:bg-blue-500 text-white rounded-lg hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors disabled:bg-blue-400 disabled:cursor-not-allowed backdrop-blur-sm"
           >
             {status === 'sending' ? (
               'Envoi en cours...'
             ) : (
               <>
-                <Send className="w-4 h-4 mr-2" />
+                <Send className="w-5 h-5 mr-2" />
                 Envoyer
               </>
             )}
-          </button>
+          </motion.button>
 
           {status === 'success' && (
-            <p className="mt-4 text-green-500 text-center">
-              Message envoyé avec succès !
-            </p>
+            <motion.p 
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="mt-4 text-green-500 dark:text-green-400 text-center font-medium"
+            >
+              Message envoyé avec succès ! Je vous répondrai dans les plus brefs délais.
+            </motion.p>
           )}
 
           {status === 'error' && (
-            <p className="mt-4 text-red-500 text-center">
+            <motion.p 
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="mt-4 text-red-500 dark:text-red-400 text-center font-medium"
+            >
               Une erreur est survenue. Veuillez réessayer.
-            </p>
+            </motion.p>
           )}
         </motion.form>
       </div>
