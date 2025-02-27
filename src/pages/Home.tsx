@@ -57,7 +57,7 @@ export default function Home() {
               Me Contacter
             </motion.a>
             <motion.a
-              href="/projects"
+              href="/projets"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-3 border-2 border-blue-600 dark:border-blue-300 text-blue-600 dark:text-blue-300 rounded-full hover:bg-blue-600 hover:text-white dark:hover:bg-blue-300 dark:hover:text-gray-900 transition-colors"
