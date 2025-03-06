@@ -32,7 +32,7 @@ export default function Home() {
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="text-center mb-16 flex flex-col items-center"
         >
           <motion.div
             animate={{ rotate: 360 }}
@@ -44,10 +44,10 @@ export default function Home() {
           <h1 className="text-5xl md:text-7xl font-bold text-blue-600 dark:text-blue-300 mb-6">
             Romain Brossault
           </h1>
-          <p className="text-2xl text-gray-600 dark:text-gray-300 mb-8">
+          <p className="text-2xl text-gray-600 dark:text-gray-300 mb-20">
             Développeur Full Stack Passionné
           </p>
-          <div className="flex justify-center space-x-4">
+          <div className="flex justify-center space-x-6 mt-16">
             <motion.a
               href="/contact"
               whileHover={{ scale: 1.05 }}
@@ -67,7 +67,7 @@ export default function Home() {
           </div>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-3 gap-8 mb-16 mt-32">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
