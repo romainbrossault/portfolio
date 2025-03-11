@@ -47,8 +47,8 @@ export default function Contact() {
     >
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <Mail className="w-16 h-16 mx-auto mb-4 text-blue-600 dark:text-blue-300" />
-          <h1 className="text-4xl font-bold text-blue-600 dark:text-blue-300">
+          <Mail className="w-16 h-16 mx-auto mb-4 text-red-600 dark:text-red-300" />
+          <h1 className="text-4xl font-bold text-red-600 dark:text-red-300">
             Contactez-moi
           </h1>
           <p className="mt-4 text-gray-600 dark:text-gray-300 text-lg">
@@ -59,7 +59,7 @@ export default function Contact() {
         <motion.form
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-white/80 dark:bg-blue-900/30 p-8 rounded-xl shadow-xl backdrop-blur-sm border border-gray-200 dark:border-blue-800/30"
+          className="bg-white/80 dark:bg-red-900/30 p-8 rounded-xl shadow-xl backdrop-blur-sm border border-gray-200 dark:border-red-800/30"
           onSubmit={handleSubmit}
         >
           <div className="grid md:grid-cols-2 gap-6 mb-6">
@@ -76,7 +76,7 @@ export default function Contact() {
                 id="firstName"
                 value={formData.firstName}
                 onChange={(e) => setFormData(prev => ({ ...prev, firstName: e.target.value }))}
-                className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white/50 dark:bg-gray-800/50 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent backdrop-blur-sm transition-colors"
+                className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white/50 dark:bg-gray-800/50 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-red-500 focus:border-transparent backdrop-blur-sm transition-colors"
                 required
               />
             </div>
@@ -93,7 +93,7 @@ export default function Contact() {
                 id="lastName"
                 value={formData.lastName}
                 onChange={(e) => setFormData(prev => ({ ...prev, lastName: e.target.value }))}
-                className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white/50 dark:bg-gray-800/50 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent backdrop-blur-sm transition-colors"
+                className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white/50 dark:bg-gray-800/50 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-red-500 focus:border-transparent backdrop-blur-sm transition-colors"
                 required
               />
             </div>
@@ -112,7 +112,7 @@ export default function Contact() {
               id="email"
               value={formData.email}
               onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
-              className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white/50 dark:bg-gray-800/50 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent backdrop-blur-sm transition-colors"
+              className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white/50 dark:bg-gray-800/50 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-red-500 focus:border-transparent backdrop-blur-sm transition-colors"
               required
               placeholder="votre.email@exemple.com"
             />
@@ -131,7 +131,7 @@ export default function Contact() {
               id="subject"
               value={formData.subject}
               onChange={(e) => setFormData(prev => ({ ...prev, subject: e.target.value }))}
-              className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white/50 dark:bg-gray-800/50 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent backdrop-blur-sm transition-colors"
+              className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white/50 dark:bg-gray-800/50 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-red-500 focus:border-transparent backdrop-blur-sm transition-colors"
               required
             />
           </div>
@@ -149,7 +149,7 @@ export default function Contact() {
               value={formData.message}
               onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
               rows={6}
-              className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white/50 dark:bg-gray-800/50 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent backdrop-blur-sm transition-colors resize-none"
+              className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white/50 dark:bg-gray-800/50 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-red-500 focus:border-transparent backdrop-blur-sm transition-colors resize-none"
               required
             />
           </div>
@@ -159,7 +159,7 @@ export default function Contact() {
             disabled={status === 'sending'}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="w-full flex items-center justify-center px-6 py-3 bg-blue-600 dark:bg-blue-500 text-white rounded-lg hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors disabled:bg-blue-400 disabled:cursor-not-allowed backdrop-blur-sm"
+            className="w-full flex items-center justify-center px-6 py-3 bg-red-600 dark:bg-red-500 text-white rounded-lg hover:bg-red-700 dark:hover:bg-red-600 transition-colors disabled:bg-red-400 disabled:cursor-not-allowed backdrop-blur-sm"
           >
             {status === 'sending' ? (
               'Envoi en cours...'

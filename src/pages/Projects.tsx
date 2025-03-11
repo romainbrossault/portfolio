@@ -39,7 +39,7 @@ export default function Projects() {
       className="min-h-screen pt-20 px-4"
     >
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl font-bold text-blue-600 dark:text-blue-300 mb-12 text-center">
+        <h1 className="text-4xl font-bold text-red-600 dark:text-red-300 mb-12 text-center">
           Mes Projets
         </h1>
 
@@ -79,7 +79,7 @@ export default function Projects() {
                       {project.technologies.map((tech, techIndex) => (
                         <span
                           key={techIndex}
-                          className="px-4 py-2 bg-blue-500/20 backdrop-blur-sm text-blue-200 rounded-full text-sm font-medium border border-blue-400/20"
+                          className="px-4 py-2 bg-red-500/20 backdrop-blur-sm text-red-200 rounded-full text-sm font-medium border border-red-400/20"
                         >
                           {tech}
                         </span>
@@ -87,7 +87,7 @@ export default function Projects() {
                     </div>
                     <a
                       href={project.github}
-                      className="inline-flex items-center px-6 py-3 bg-blue-600/90 hover:bg-blue-500/90 text-white rounded-full transition-colors duration-300 backdrop-blur-sm"
+                      className="inline-flex items-center px-6 py-3 bg-red-600/90 hover:bg-red-500/90 text-white rounded-full transition-colors duration-300 backdrop-blur-sm"
                     >
                       <Github className="w-5 h-5 mr-2" />
                       Voir le code
@@ -97,7 +97,7 @@ export default function Projects() {
               </div>
               
               {/* Effet de brillance */}
-              <div className="absolute -inset-x-4 -inset-y-4 z-0 bg-gradient-to-r from-blue-500/0 via-blue-500/10 to-purple-500/0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+              <div className="absolute -inset-x-4 -inset-y-4 z-0 bg-gradient-to-r from-red-500/0 via-red-500/10 to-purple-500/0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
             </motion.div>
           ))}
         </div>

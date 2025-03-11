@@ -82,8 +82,8 @@ export default function Skills() {
           animate={{ y: 0 }}
           className="text-center mb-12"
         >
-          <Cpu className="w-16 h-16 mx-auto mb-4 text-blue-600 dark:text-blue-300" />
-          <h1 className="text-4xl font-bold text-blue-600 dark:text-blue-300 mb-4">
+          <Cpu className="w-16 h-16 mx-auto mb-4 text-red-600 dark:text-red-300" />
+          <h1 className="text-4xl font-bold text-red-600 dark:text-red-300 mb-4">
             Mes Compétences
           </h1>
           <p className="text-gray-600 dark:text-gray-300 text-lg max-w-2xl mx-auto">
@@ -98,9 +98,9 @@ export default function Skills() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white/80 dark:bg-blue-900/30 p-6 rounded-xl shadow-xl backdrop-blur-sm border border-gray-200/50 dark:border-blue-800/30 hover:transform hover:scale-105 transition-all duration-300"
+              className="bg-white/80 dark:bg-red-900/30 p-6 rounded-xl shadow-xl backdrop-blur-sm border border-gray-200/50 dark:border-red-800/30 hover:transform hover:scale-105 transition-all duration-300"
             >
-              <div className="flex items-center mb-6 text-blue-600 dark:text-blue-300">
+              <div className="flex items-center mb-6 text-red-600 dark:text-red-300">
                 {category.icon}
                 <h2 className="text-xl font-bold ml-3">{category.name}</h2>
               </div>
@@ -117,7 +117,7 @@ export default function Skills() {
                       <span className="text-gray-700 dark:text-gray-300 font-medium">
                         {skill.name}
                       </span>
-                      <span className="text-blue-600 dark:text-blue-300">
+                      <span className="text-red-600 dark:text-red-300">
                         {skill.level}%
                       </span>
                     </div>
@@ -126,7 +126,7 @@ export default function Skills() {
                         initial={{ width: 0 }}
                         animate={{ width: `${skill.level}%` }}
                         transition={{ duration: 1, delay: index * 0.1 + skillIndex * 0.05 }}
-                        className="h-full bg-blue-600 dark:bg-blue-400 rounded-full"
+                        className="h-full bg-red-600 dark:bg-red-400 rounded-full"
                       />
                     </div>
                   </motion.div>

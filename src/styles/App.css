@@ -1,44 +1,11 @@
 @import './cursor.css';
 @import './animations.css';
 @import './navigation.css';
-@import './spaceEffect.css';
-@import './introAnimation.css';
-
-:root {
-  --star-color: #fef3c7;
-  --meteor-color: #f87171;
-  --nebula-color: #4c1d95;
-}
 
 body {
-  @apply bg-blue-50 text-gray-900 transition-colors duration-300;
+  @apply bg-white text-gray-900 transition-colors duration-300;
 }
 
 .dark body {
-  @apply bg-space-base text-gray-100;
-  background-image: 
-    radial-gradient(circle at 20% 20%, theme('colors.space.nebula') 0%, transparent 40%),
-    radial-gradient(circle at 80% 80%, theme('colors.space.cosmos') 0%, transparent 40%),
-    radial-gradient(circle at center, theme('colors.space.lighter') 0%, theme('colors.space.dark') 100%);
-}
-
-.space-card {
-  @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-lg shadow-xl;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.1) 0%,
-    rgba(255, 255, 255, 0.05) 100%
-  );
-}
-
-.space-button {
-  @apply bg-space-accent/20 hover:bg-space-accent/30 text-space-star 
-         border border-space-accent/30 rounded-lg px-4 py-2
-         transition-all duration-300 backdrop-blur-sm;
-}
-
-.meteor {
-  @apply absolute w-1 h-1 bg-space-meteor rounded-full;
-  box-shadow: 0 0 10px 2px theme('colors.space.meteor');
-  animation: meteor 8s linear infinite;
+  @apply bg-[#000000] text-gray-100;
 }

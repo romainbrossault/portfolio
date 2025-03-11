@@ -53,8 +53,8 @@ export default function Formations() {
           animate={{ y: 0 }}
           className="text-center mb-12"
         >
-          <GraduationCap className="w-16 h-16 mx-auto mb-4 text-blue-600 dark:text-blue-300" />
-          <h1 className="text-4xl font-bold text-blue-600 dark:text-blue-300 mb-4">
+          <GraduationCap className="w-16 h-16 mx-auto mb-4 text-red-600 dark:text-red-300" />
+          <h1 className="text-4xl font-bold text-red-600 dark:text-red-300 mb-4">
             Mon Parcours Académique
           </h1>
           <p className="text-gray-600 dark:text-gray-300 text-lg max-w-2xl mx-auto">
@@ -69,10 +69,10 @@ export default function Formations() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.2 }}
-              className="bg-white/80 dark:bg-blue-900/30 rounded-xl shadow-xl overflow-hidden backdrop-blur-sm border border-gray-200/50 dark:border-blue-800/30"
+              className="bg-white/80 dark:bg-red-900/30 rounded-xl shadow-xl overflow-hidden backdrop-blur-sm border border-gray-200/50 dark:border-red-800/30"
             >
               <div className="p-8">
-                <h2 className="text-2xl font-bold text-blue-600 dark:text-blue-300 mb-4">
+                <h2 className="text-2xl font-bold text-red-600 dark:text-red-300 mb-4">
                   {formation.title}
                 </h2>
                 
@@ -94,7 +94,7 @@ export default function Formations() {
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
                     <h3 className="flex items-center text-lg font-semibold text-gray-900 dark:text-white mb-4">
-                      <BookOpen className="w-5 h-5 mr-2 text-blue-600 dark:text-blue-300" />
+                      <BookOpen className="w-5 h-5 mr-2 text-red-600 dark:text-red-300" />
                       Programme
                     </h3>
                     <ul className="space-y-2">
@@ -106,7 +106,7 @@ export default function Formations() {
                           transition={{ delay: 0.3 + index * 0.1 }}
                           className="flex items-start text-gray-600 dark:text-gray-300"
                         >
-                          <span className="mr-2 text-blue-600 dark:text-blue-300">•</span>
+                          <span className="mr-2 text-red-600 dark:text-red-300">•</span>
                           <span>{detail}</span>
                         </motion.li>
                       ))}
@@ -115,7 +115,7 @@ export default function Formations() {
 
                   <div>
                     <h3 className="flex items-center text-lg font-semibold text-gray-900 dark:text-white mb-4">
-                      <Award className="w-5 h-5 mr-2 text-blue-600 dark:text-blue-300" />
+                      <Award className="w-5 h-5 mr-2 text-red-600 dark:text-red-300" />
                       Réalisations
                     </h3>
                     <ul className="space-y-2">
@@ -127,7 +127,7 @@ export default function Formations() {
                           transition={{ delay: 0.3 + index * 0.1 }}
                           className="flex items-start text-gray-600 dark:text-gray-300"
                         >
-                          <span className="mr-2 text-blue-600 dark:text-blue-300">★</span>
+                          <span className="mr-2 text-red-600 dark:text-red-300">★</span>
                           <span>{achievement}</span>
                         </motion.li>
                       ))}
