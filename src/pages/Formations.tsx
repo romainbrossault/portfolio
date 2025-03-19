@@ -35,6 +35,7 @@ export default function Formations() {
         "Analyse et conception de solutions techniques"
       ],
       achievements: [
+        "Mention Bien",
         "Projets innovants",
         "Travail en équipe"
       ]

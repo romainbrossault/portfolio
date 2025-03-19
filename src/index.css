@@ -1,7 +1,5 @@
-@import './styles/navigation.css';
-@import './styles/bubbleEffect.css';
-@import './styles/introAnimation.css';
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import './styles/App.css';

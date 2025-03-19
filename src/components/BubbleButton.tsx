@@ -13,7 +13,7 @@ export default function BubbleButton({ onClick, children, className = '' }: Bubb
       className={`relative overflow-hidden ${className}`}
       onClick={onClick}
       whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}  
+      whileTap={{ scale: 0.95 }}
     >
       {children}
       <motion.div

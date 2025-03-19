@@ -13,8 +13,8 @@ const skillCategories = [
       { name: "HTML", level: 100 },
       { name: "CSS", level: 100 },
       { name: "JavaScript", level: 80 },
-      { name: "Java", level: 50 },
-      { name: "SQL", level: 80 },
+      { name: "Java", level: 65 },
+      { name: "SQL", level: 90 },
       { name: "PHP", level: 90 }
     ]
   },
@@ -22,9 +22,9 @@ const skillCategories = [
     name: "Bases de données",
     icon: <Database className="w-8 h-8" />,
     skills: [
-      { name: "MySQL", level: 85 },
-      { name: "MariaDB", level: 60 },
-      { name: "PostgreSQL", level: 60 },
+      { name: "MySQL", level: 90 },
+      { name: "MariaDB", level: 70 },
+      { name: "PostgreSQL", level: 90 },
       { name: "phpMyAdmin", level: 100 }
     ]
   },
@@ -32,21 +32,21 @@ const skillCategories = [
     name: "Frameworks & Outils",
     icon: <Terminal className="w-8 h-8" />,
     skills: [
-      { name: "Symfony", level: 80 },
-      { name: "NodeJS", level: 90 },
+      { name: "Symfony", level: 90 },
+      { name: "NodeJS", level: 100 },
       { name: "VS Code", level: 100 },
-      { name: "Visual Studio", level: 50 },
-      { name: "WPF", level: 50 },
-      { name: "Notion", level: 60 }
+      { name: "Visual Studio", level: 60 },
+      { name: "WPF", level: 60 },
+      { name: "Notion", level: 90 }
     ]
   },
   {
     name: "Design",
     icon: <Palette className="w-8 h-8" />,
     skills: [
-      { name: "Photoshop", level: 60 },
+      { name: "Photoshop", level: 70 },
       { name: "Paint.net", level: 100 },
-      { name: "Figma", level: 50 }
+      { name: "Figma", level: 80 }
     ]
   },
   {
@@ -55,7 +55,7 @@ const skillCategories = [
     skills: [
       { name: "Ubuntu", level: 100 },
       { name: "Windows", level: 100 },
-      { name: "MacOS", level: 85 },
+      { name: "MacOS", level: 100 },
       { name: "Debian", level: 100 }
     ]
   },
@@ -63,7 +63,7 @@ const skillCategories = [
     name: "Administration Serveur",
     icon: <Server className="w-8 h-8" />,
     skills: [
-      { name: "Windows Server", level: 90 },
+      { name: "Windows Server", level: 70 },
       { name: "Apache2", level: 100 }
     ]
   }

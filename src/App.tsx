@@ -1,9 +1,7 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Navigation from './components/Navigation';
-import WaveBackground from './components/WaveBackground';
 import BubbleEffect from './components/BubbleEffect';
-import IntroAnimation from './components/IntroAnimation';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Skills from './pages/Skills';
@@ -28,8 +26,7 @@ function AppContent() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-blue-50 dark:bg-space-base text-gray-900 dark:text-gray-100 flex flex-col cursor-bubble">
-      <WaveBackground />
+    <div className="min-h-screen bg-white dark:bg-dark text-gray-900 dark:text-gray-100 flex flex-col">
       <BubbleEffect />
       <div className="relative z-10 flex flex-col min-h-screen">
         <Navigation />
@@ -55,11 +52,10 @@ function App() {
   return (
     <ThemeProvider>
       <BrowserRouter>
-        <IntroAnimation />
         <AppContent />
       </BrowserRouter>
     </ThemeProvider>
   );
 }
 
-export default App
+export default App;

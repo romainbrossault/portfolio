@@ -1,20 +1,20 @@
 .wave-background {
-    @apply absolute inset-0;
-    background: radial-gradient(circle at 50% 50%, #60A5FA 0%, transparent 50%),
-                radial-gradient(circle at 100% 0%, #93C5FD 0%, transparent 50%),
-                radial-gradient(circle at 0% 100%, #1E40AF 0%, transparent 50%);
-  }
-  
-  .dark .wave-background {
-    background: radial-gradient(circle at 50% 50%, theme('colors.space.accent') 0%, transparent 50%),
-                radial-gradient(circle at 100% 0%, theme('colors.space.highlight') 0%, transparent 50%),
-                radial-gradient(circle at 0% 100%, theme('colors.space.lighter') 0%, transparent 50%);
-    opacity: 0.15;
-  }
-  
-  .star {
-    position: fixed;
-    background: white;
-    border-radius: 50%;
-    animation: twinkle var(--twinkle-duration, 2s) infinite;
-  }
+  @apply absolute inset-0;
+  background: radial-gradient(circle at 50% 50%, #60A5FA 0%, transparent 50%),
+              radial-gradient(circle at 100% 0%, #93C5FD 0%, transparent 50%),
+              radial-gradient(circle at 0% 100%, #1E40AF 0%, transparent 50%);
+}
+
+.dark .wave-background {
+  background: radial-gradient(circle at 50% 50%, theme('colors.space.accent') 0%, transparent 50%),
+              radial-gradient(circle at 100% 0%, theme('colors.space.highlight') 0%, transparent 50%),
+              radial-gradient(circle at 0% 100%, theme('colors.space.lighter') 0%, transparent 50%);
+  opacity: 0.15;
+}
+
+.star {
+  position: fixed;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle var(--twinkle-duration, 2s) infinite;
+}

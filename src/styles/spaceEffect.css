@@ -1,39 +1,223 @@
 .space-background {
-    @apply fixed inset-0 -z-10 overflow-hidden;
+  @apply fixed inset-0 -z-10 overflow-hidden;
+}
+
+.star {
+  @apply absolute rounded-full bg-space .star {
+  @apply absolute rounded-full bg-space-star;
+  animation: twinkle var(--twinkle-duration, 2s) ease-in-out infinite;
+}
+
+
+.nebula {
+  @apply absolute opacity-30 blur-2xl;
+  background: radial-gradient(circle, var(--nebula-color), transparent);
+}
+
+.space-glow {
+  @apply absolute inset-0;
+  background: radial-gradient(
+    circle at var(--x, 50%) var(--y, 50%),
+    rgba(99, 102, 241, 0.15) 0%,
+    transparent 50%
+  );
+}
+
+.space-card::before {
+  content: '';
+  @apply absolute inset-0 -z-10 rounded-lg opacity-30;
+  background: linear-gradient(
+    45deg,
+    transparent 0%,
+    rgba(99, 102, 241, 0.2) 50%,
+    transparent 100%
+  );
+  filter: blur(10px);
+}
+
+/* Star Wars specific effects */
+.death-star {
+  @apply absolute rounded-full;
+  background: radial-gradient(circle, #9ca3af, #4b5563, #1f2937);
+  box-shadow: 0 0 20px rgba(31, 41, 55, 0.7);
+}
+
+.tie-fighter {
+  @apply absolute;
+  width: 30px;
+  height: 30px;
+}
+
+.tie-fighter::before,
+.tie-fighter::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #4b5563;
+  transform: rotate(45deg);
+}
+
+.tie-fighter::before {
+  left: -15px;
+}
+
+.tie-fighter::after {
+  right: -15px;
+}
+
+.tie-fighter-center {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #1f2937;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.x-wing {
+  @apply absolute;
+  width: 40px;
+  height: 10px;
+  background: #dc2626;
+}
+
+.x-wing::before,
+.x-wing::after {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 4px;
+  background: #ef4444;
+}
+
+.x-wing::before {
+  top: -5px;
+  transform: rotate(-15deg);
+}
+
+.x-wing::after {
+  bottom: -5px;
+  transform: rotate(15deg);
+}
+
+.lightsaber-beam {
+  position: absolute;
+  height: 3px;
+  border-radius: 1.5px;
+  transform-origin: left center;
+}
+
+.lightsaber-blue {
+  background: var(--lightsaber-blue);
+  box-shadow: 0 0 10px 2px var(--lightsaber-blue);
+}
+
+.lightsaber-red {
+  background: var(--lightsaber-red);
+  box-shadow: 0 0 10px 2px var(--lightsaber-red);
+}
+
+.lightsaber-green {
+  background: var(--lightsaber-green);
+  box-shadow: 0 0 10px 2px var(--lightsaber-green);
+}
+
+.star-wars-stars {
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 90px 40px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  animation: stars-scroll 100s linear infinite;
+}
+
+@keyframes stars-scroll {
+  from { background-position: 0 0; }
+  to { background-position: 0 1000px; }
+}
+
+/* Enhanced Star Wars effects */
+.hyperspace {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, #0a0b1e 0%, #050614 100%);
+  overflow: hidden;
+}
+
+.hyperspace-star {
+  position: absolute;
+  background: white;
+  width: 2px;
+  height: 2px;
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
+  animation: hyperspace-travel 3s linear infinite;
+}
+
+@keyframes hyperspace-travel {
+  0% {
+    transform: translateZ(0) scale(0.1);
+    opacity: 0;
   }
-  
-  .star {
-    @apply absolute rounded-full bg-space-star;
-    animation: twinkle var(--twinkle-duration, 2s) ease-in-out infinite;
+  30% {
+    opacity: 1;
   }
-  
-  .planet {
-    @apply absolute rounded-full;
-    animation: orbit var(--orbit-duration, 20s) linear infinite;
+  100% {
+    transform: translateZ(1000px) scale(1);
+    opacity: 0;
   }
-  
-  .nebula {
-    @apply absolute opacity-30 blur-2xl;
-    background: radial-gradient(circle, var(--nebula-color), transparent);
-  }
-  
-  .space-glow {
-    @apply absolute inset-0;
-    background: radial-gradient(
-      circle at var(--x, 50%) var(--y, 50%),
-      rgba(99, 102, 241, 0.15) 0%,
-      transparent 50%
-    );
-  }
-  
-  .space-card::before {
-    content: '';
-    @apply absolute inset-0 -z-10 rounded-lg opacity-30;
-    background: linear-gradient(
-      45deg,
-      transparent 0%,
-      rgba(99, 102, 241, 0.2) 50%,
-      transparent 100%
-    );
-    filter: blur(10px);
-  }
+}
+
+.force-lightning {
+  position: absolute;
+  height: 2px;
+  background: #3b82f6;
+  filter: blur(1px);
+  box-shadow: 0 0 8px 2px rgba(59, 130, 246, 0.8);
+  animation: lightning-flicker 0.2s infinite alternate;
+  transform-origin: left;
+}
+
+@keyframes lightning-flicker {
+  0% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+.star-destroyer-shadow {
+  position: absolute;
+  width: 300px;
+  height: 150px;
+  background: rgba(0, 0, 0, 0.5);
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+  animation: shadow-move 20s linear infinite;
+}
+
+@keyframes shadow-move {
+  0% { transform: translateX(-400px); }
+  100% { transform: translateX(calc(100vw + 400px)); }
+}
+
+.planet-hoth {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #f1f5f9, #e2e8f0);
+  box-shadow: 0 0 20px rgba(241, 245, 249, 0.3);
+}
+
+.planet-tatooine {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #fbbf24, #d97706);
+  box-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
+}
+
+.planet-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  transform: rotateX(75deg);
+}

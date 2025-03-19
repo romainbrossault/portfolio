@@ -3,32 +3,32 @@ import { motion } from 'framer-motion';
 import { Github } from 'lucide-react';
 
 /* Images */
-import p1 from '../images/portfolio.png';
-import p2 from '../images/projet_restaurant.jpg';
-import p3 from '../images/testAlcool.png';
+import portfolioImage from '../images/portfolio.png';
+import restaurantImage from '../images/projet_restaurant.jpg';
+import alcoolImage from '../images/testAlcool.png';
 
 export default function Projects() {
   const projects = [
     {
       title: "Portfolio Personnel",
       description: "Portfolio moderne avec des animations fluides, un thème sombre/clair, et une interface intuitive. Développé avec React et Tailwind CSS. Le thème sombre présente un système solaire interactif tandis que le thème clair offre une ambiance aquatique apaisante avec des bulles animées.",
-      image: p1,
-      technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
-      github: "https://github.com/romainbrossault/portfolio"
+      image: portfolioImage,
+      technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Canvas API"],
+      github: "#"
     },
     {
       title: "Application de Gestion de Restaurant",
       description: "Application web complète permettant la gestion des commandes, des réservations et du stock d'un restaurant. Interface administrateur intuitive et expérience client optimisée. Système de notifications en temps réel et tableau de bord analytique pour suivre les performances du restaurant.",
-      image: p2,
-      technologies: ["React", "Node.js", "MySQL", "Express"],
-      github: "https://github.com/romainbrossault/restaurant_project"
+      image: restaurantImage,
+      technologies: ["React", "Node.js", "MySQL", "Express", "Socket.io", "Chart.js"],
+      github: "#"
     },
     {
-      title: "Application de Test d'Alcoolémie",
-      description: "Application de bureau développée en C# avec WPF pour tester son taux d'alcoolémie. Interface simple et intuitive pour saisir les informations nécessaires et obtenir un résultat précis. Possibilité de sauvegarder les résultats et de les consulter ultérieurement.",
-      image: p3,
-      technologies: ["C#", "WPF", "XAML"],
-      github: "https://github.com/romainbrossault/AlcoolTest-WPF"
+      title: "Application de test d'alcoolémie",
+      description: "Application permettant de mesurer le taux d'alcoolémie dans le sang en fonction de la quantité d'alcool consommée. Interface simple et intuitive pour une utilisation rapide et efficace. Calculs basés sur des formules scientifiques précises.",
+      image: alcoolImage,
+      technologies: ["C#", "WPF"],
+      github: "#"
     }
   ];
 

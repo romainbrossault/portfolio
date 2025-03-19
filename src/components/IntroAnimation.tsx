@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import '../styles/introAnimation.css';
 
 export default function IntroAnimation() {
   const [isVisible, setIsVisible] = useState(true);
@@ -27,15 +26,15 @@ export default function IntroAnimation() {
         <motion.div
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="intro-container"
+          className="fixed inset-0 z-50 bg-blue-50 dark:bg-gray-900 flex items-center justify-center"
         >
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="intro-logo"
+            className="text-4xl font-bold text-blue-600 dark:text-blue-300 relative"
           >
-            Romain Brossault
+            RB
           </motion.div>
           {bubbles.map(bubble => (
             <motion.div
@@ -57,7 +56,7 @@ export default function IntroAnimation() {
                 delay: bubble.delay,
                 ease: "easeOut"
               }}
-              className="intro-bubble"
+              className="absolute rounded-full bg-blue-300/30 dark:bg-blue-500/30"
               style={{
                 width: bubble.size,
                 height: bubble.size

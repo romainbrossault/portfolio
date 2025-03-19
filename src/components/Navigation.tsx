@@ -19,7 +19,7 @@ export default function Navigation() {
   }, []);
 
   const handleDownloadCV = () => {
-    const cvUrl = '/path-to-your-cv.pdf';
+    const cvUrl = '/src/components/CV_BrossaultRomain.pdf';
     const link = document.createElement('a');
     link.href = cvUrl;
     link.download = 'Romain_Brossault_CV.pdf';
@@ -30,7 +30,7 @@ export default function Navigation() {
 
   return (
     <nav className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-black/50 backdrop-blur-sm' : 'bg-transparent'
+      isScrolled ? 'bg-white/80 dark:bg-dark/80 backdrop-blur-sm shadow-lg' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -58,7 +58,7 @@ export default function Navigation() {
                   text-sm font-medium transition-colors
                   ${isActive 
                     ? 'text-red-600' 
-                    : 'text-gray-300 hover:text-red-600'}
+                    : 'text-gray-600 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-500'}
                 `}
               >
                 {label}
@@ -77,7 +77,7 @@ export default function Navigation() {
             
             <button
               onClick={toggleTheme}
-              className="p-2 text-gray-300 hover:text-red-600"
+              className="p-2 text-gray-600 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-500"
             >
               {theme === 'light' ? (
                 <Moon className="w-5 h-5" />
@@ -90,7 +90,7 @@ export default function Navigation() {
           <div className="md:hidden flex items-center space-x-4">
             <button
               onClick={toggleTheme}
-              className="p-2 text-gray-300"
+              className="p-2 text-gray-600 dark:text-gray-400"
             >
               {theme === 'light' ? (
                 <Moon className="w-5 h-5" />
@@ -101,7 +101,7 @@ export default function Navigation() {
             
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-300"
+              className="text-gray-600 dark:text-gray-400"
             >
               {isMenuOpen ? (
                 <X className="w-6 h-6" />
@@ -119,7 +119,7 @@ export default function Navigation() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-black/50 backdrop-blur-sm"
+            className="md:hidden bg-white/80 dark:bg-dark/80 backdrop-blur-sm"
           >
             <div className="px-4 py-2 space-y-1">
               {[
@@ -138,7 +138,7 @@ export default function Navigation() {
                     block py-2 text-base font-medium
                     ${isActive 
                       ? 'text-red-600' 
-                      : 'text-gray-300 hover:text-red-600'}
+                      : 'text-gray-600 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-500'}
                   `}
                 >
                   {label}

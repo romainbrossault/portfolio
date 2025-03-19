@@ -35,7 +35,7 @@ export default function BubbleEffect() {
       bubbles.forEach(bubble => {
         ctx.beginPath();
         ctx.arc(bubble.x, bubble.y, bubble.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(239, 68, 68, ${bubble.opacity})`;
+        ctx.fillStyle = `rgba(220, 38, 38, ${bubble.opacity})`; // Rouge pour correspondre au thème
         ctx.fill();
 
         bubble.y -= bubble.speedY;

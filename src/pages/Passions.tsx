@@ -2,18 +2,18 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Heart, Trophy, Code, Gamepad, Zap } from 'lucide-react';
 
-/* Image */
-import terrier from '../images/MartinTerrier.jpg';
-import hbcn from '../images/HBCnantes.png';
-import devweb from '../images/devWEB.jpg';
-import yoda from '../images/yoda.jpeg';
+/* Images */
+import martinTerrier from '../images/MartinTerrier.jpg';
+import handball from '../images/HBCnantes.png';
+import yodaImage from '../images/yoda.jpeg';
+import webdevImage from '../images/devWEB.jpg';
 
 export default function Passions() {
   const passions = [
     {
       title: "Football",
       icon: <Trophy className="w-12 h-12" />,
-      image: terrier,
+      image: martinTerrier,
       description: "Passionné de football depuis l'âge de 5 ans, je suis un fervent supporter du Stade Rennais. Mon joueur préféré est Martin Terrier, un attaquant talentueux dont j'admire la technique, la vision du jeu et la finesse dans ses finitions. Son style de jeu élégant et son engagement sur le terrain en font un joueur exemplaire qui incarne parfaitement les valeurs du club.",
       highlights: [
         "Supporter du Stade Rennais",
@@ -24,7 +24,7 @@ export default function Passions() {
     {
       title: "Handball",
       icon: <Trophy className="w-12 h-12" />,
-      image: hbcn,
+      image: handball,
       description: "J'ai pratiqué le handball pendant 13 ans, dont 4 saisons au centre de formation du HBC Nantes. Cette expérience m'a appris l'importance du travail d'équipe, de la discipline et de la persévérance.",
       highlights: [
         "13 ans de pratique",
@@ -35,9 +35,10 @@ export default function Passions() {
     {
       title: "Star Wars",
       icon: <Zap className="w-12 h-12" />,
-      image: yoda,
+      image: yodaImage,
       description: "Fan inconditionnel de l'univers Star Wars, je suis fasciné par la richesse de cette saga qui mêle science-fiction, mythologie et philosophie. J'apprécie particulièrement les thèmes de la dualité entre le côté lumineux et le côté obscur de la Force, ainsi que les personnages complexes comme Anakin Skywalker/Dark Vador.",
       highlights: [
+        "Collection de figurines et de livres",
         "Connaissance approfondie de l'univers étendu",
         "Préférence pour la trilogie originale et The Mandalorian"
       ]
@@ -45,7 +46,7 @@ export default function Passions() {
     {
       title: "Développement Web",
       icon: <Code className="w-12 h-12" />,
-      image: devweb,
+      image: webdevImage,
       description: "Le développement web est plus qu'un métier pour moi, c'est une véritable passion. J'aime particulièrement explorer de nouvelles technologies et créer des solutions innovantes. Cette passion me pousse à continuellement améliorer mes compétences à travers divers projets personnels.",
       highlights: [
         "Veille technologique constante",
